@@ -1,87 +1,103 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const links = ["About", "Skills", "Projects", "Contact"];
+const links = [
+  { label: "Skills", href: "#skills" },
+  { label: "Work Experiences", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1O88I_47FCAxyJX77SjXzNDK6cN0h9tP7/view?usp=sharing" },
+  { label: "Contact Me", href: "#contact" },
+];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+  }, [dark]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Logo */}
-        <a href="#hero" className="text-xl font-bold tracking-tight">
-          <span className="text-black">dev</span>
-          <span style={{ color: "#6C63FF" }}>.</span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0f0f0f]/90 backdrop-blur border-b border-gray-100 dark:border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        {/* Script logo */}
+        <a href="#hero" className="flex items-center gap-1 select-none">
+          <span className="text-gray-400 text-lg font-mono">&lt;</span>
+          <span
+            className="font-script text-2xl"
+            style={{ color: "#6C63FF" }}
+          >
+            Janviere
+          </span>
+          <span className="text-gray-400 text-lg font-mono">/&gt;</span>
         </a>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
-            <li key={l}>
-              <a
-                href={`#${l.toLowerCase()}`}
-                className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
-              >
-                {l}
-              </a>
-            </li>
-          ))}
-          <li>
             <a
-              href="/resume.pdf"
-              download
-              className="text-sm font-medium px-4 py-2 rounded-md text-white transition-opacity hover:opacity-80"
-              style={{ backgroundColor: "#6C63FF" }}
+              key={l.label}
+              href={l.href}
+              className="text-sm text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
-              Download CV
+              {l.label}
             </a>
-          </li>
-        </ul>
+          ))}
+
+          {/* Dark mode toggle */}
+          <button
+            onClick={() => setDark(!dark)}
+            className="relative w-12 h-6 rounded-full transition-colors flex items-center px-1"
+            style={{ backgroundColor: dark ? "#6C63FF" : "#e5e7eb" }}
+            aria-label="Toggle dark mode"
+          >
+            <span
+              className="w-5 h-5 rounded-full bg-white shadow transition-transform flex items-center justify-center text-xs"
+              style={{ transform: dark ? "translateX(22px)" : "translateX(0)" }}
+            >
+              {dark ? "" : ""}
+            </span>
+          </button>
+        </div>
 
         {/* Mobile burger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setOpen(!open)}
+          className="md:hidden p-2"
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`block h-0.5 w-5 bg-black transition-transform ${open ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-5 bg-black transition-opacity ${open ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block h-0.5 w-5 bg-black transition-transform ${open ? "-rotate-45 -translate-y-2" : ""}`}
-          />
+          <div className="space-y-1.5">
+            <span className={`block h-0.5 w-6 bg-gray-700 dark:bg-gray-200 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-gray-700 dark:bg-gray-200 transition-all ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-gray-700 dark:bg-gray-200 transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          </div>
         </button>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 pb-4">
+      {menuOpen && (
+        <div className="md:hidden bg-white dark:bg-[#0f0f0f] border-t border-gray-100 dark:border-gray-800 px-6 pb-5">
           <ul className="flex flex-col gap-4 mt-4">
             {links.map((l) => (
-              <li key={l}>
+              <li key={l.label}>
                 <a
-                  href={`#${l.toLowerCase()}`}
-                  className="text-sm font-medium text-gray-600 hover:text-black"
-                  onClick={() => setOpen(false)}
+                  href={l.href}
+                  className="text-sm text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  onClick={() => setMenuOpen(false)}
                 >
-                  {l}
+                  {l.label}
                 </a>
               </li>
             ))}
             <li>
-              <a
-                href="/resume.pdf"
-                download
-                className="inline-block text-sm font-medium px-4 py-2 rounded-md text-white"
-                style={{ backgroundColor: "#6C63FF" }}
+              <button
+                onClick={() => setDark(!dark)}
+                className="text-sm text-gray-600 dark:text-gray-300"
               >
-                Download CV
-              </a>
+                {dark ? "☀️ Light Mode" : "🌙 Dark Mode"}
+              </button>
             </li>
           </ul>
         </div>
