@@ -35,10 +35,10 @@ export default function Hero() {
             Hi all, I&apos;m Uwera Janviere 
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-            A passionate Full Stack Software Developer  having experience
-            building Web and Mobile applications with JavaScript / React.js /
-            Node.js / TypeScript / Express.js / Next.js and other cool
-            libraries and frameworks.
+            A passionate Full Stack Software Developer 🚀 with experience
+            building Java backend systems and JavaFX desktop applications.
+            I work with Java / Spring Boot / JavaFX / Angular / React.js and
+            other cool libraries and frameworks.
           </p>
 
           {/* Social icons */}

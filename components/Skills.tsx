@@ -1,18 +1,16 @@
 const techStack = [
-  { name: "HTML5",      color: "#E44D26", icon: "📄" },
-  { name: "CSS3",       color: "#1572B6", icon: "🎨" },
-  { name: "Bootstrap",  color: "#7952B3", icon: "B"  },
-  { name: "JavaScript", color: "#F7DF1E", icon: "JS", dark: true },
-  { name: "TypeScript", color: "#3178C6", icon: "TS" },
-  { name: "Angular",    color: "#DD0031", icon: "A"  },
-  { name: "React.js",   color: "#61DAFB", icon: "⚛", dark: true },
-  { name: "Next.js",    color: "#111111", icon: "N"  },
-  { name: "Java",       color: "#007396", icon: "☕" },
-  { name: "Python",     color: "#3776AB", icon: "🐍" },
-  { name: "MongoDB",    color: "#47A248", icon: "🍃" },
-  { name: "PostgreSQL", color: "#336791", icon: "🐘" },
-  { name: "Git",        color: "#F05032", icon: "⎇"  },
-  { name: "Figma",      color: "#F24E1E", icon: "✦"  },
+  { name: "HTML5",       color: "#E44D26", icon: "📄" },
+  { name: "CSS3",        color: "#1572B6", icon: "🎨" },
+  { name: "Bootstrap",   color: "#7952B3", icon: "B"  },
+  { name: "JavaScript",  color: "#F7DF1E", icon: "JS", dark: true },
+  { name: "Angular",     color: "#DD0031", icon: "A"  },
+  { name: "React.js",    color: "#61DAFB", icon: "⚛",  dark: true },
+  { name: "Java",        color: "#007396", icon: "☕" },
+  { name: "Spring Boot", color: "#6DB33F", icon: "🍃" },
+  { name: "JavaFX",      color: "#007396", icon: "🖥"  },
+  { name: "Python",      color: "#3776AB", icon: "🐍" },
+  { name: "PostgreSQL",  color: "#336791", icon: "🐘" },
+  { name: "Git",         color: "#F05032", icon: "⎇"  },
 ];
 
 const proficiency = [
@@ -67,13 +65,12 @@ export default function Skills() {
               What I do
             </h2>
             <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase">
-              Passionate full stack developer who wants to explore every tech
-              stack
+              Java backend & desktop developer who loves building robust systems
             </p>
           </div>
 
           {/* Tech icons grid */}
-          <div className="grid grid-cols-7 gap-4">
+          <div className="grid grid-cols-6 gap-4">
             {techStack.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center gap-1">
                 <div
@@ -94,10 +91,10 @@ export default function Skills() {
 
           {/* Bullet points */}
           <ul className="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <li>⚡ Build interactive front-end UIs with React, Angular, Next.js, and TypeScript</li>
-            <li>⚡ Backend development with Java, Python, MongoDB and PostgreSQL</li>
-            <li>⚡ Integration with third-party services like Firebase and Supabase</li>
-            <li>⚡ Proficient in JavaScript, TypeScript, Java, Python and modern tooling</li>
+            <li>⚡ Java backend development with Spring Boot, REST APIs and PostgreSQL</li>
+            <li>⚡ JavaFX desktop applications following MVC architecture with JDBC</li>
+            <li>⚡ Frontend development with Angular and React.js</li>
+            <li>⚡ Data analysis with Python and machine learning projects</li>
           </ul>
         </div>
       </div>

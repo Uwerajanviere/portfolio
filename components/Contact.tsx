@@ -30,9 +30,10 @@ export default function Contact() {
           </p>
 
           <p className="text-gray-700 dark:text-gray-300 italic leading-relaxed">
-            &quot;I&apos;m a full-stack developer passionate about building web
-            applications. Currently focusing on honing my skills and exploring
-            new technologies.&quot;
+            &quot;I&apos;m a Java backend and desktop application developer,
+            passionate about building robust systems with Spring Boot and
+            JavaFX. Currently expanding my skills in web development with
+            Angular and React.&quot;
           </p>
 
           <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
