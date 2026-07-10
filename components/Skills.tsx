@@ -1,16 +1,16 @@
 const techStack = [
-  { name: "HTML5",       color: "#E44D26", icon: "📄" },
-  { name: "CSS3",        color: "#1572B6", icon: "🎨" },
-  { name: "Bootstrap",   color: "#7952B3", icon: "B"  },
-  { name: "JavaScript",  color: "#F7DF1E", icon: "JS", dark: true },
-  { name: "Angular",     color: "#DD0031", icon: "A"  },
-  { name: "React.js",    color: "#61DAFB", icon: "⚛",  dark: true },
-  { name: "Java",        color: "#007396", icon: "☕" },
-  { name: "Spring Boot", color: "#6DB33F", icon: "🍃" },
-  { name: "JavaFX",      color: "#007396", icon: "🖥"  },
-  { name: "Python",      color: "#3776AB", icon: "🐍" },
-  { name: "PostgreSQL",  color: "#336791", icon: "🐘" },
-  { name: "Git",         color: "#F05032", icon: "⎇"  },
+  { name: "HTML5",       color: "#E44D26", icon: "HTML" },
+  { name: "CSS3",        color: "#1572B6", icon: "CSS"  },
+  { name: "Bootstrap",   color: "#7952B3", icon: "BS"   },
+  { name: "JavaScript",  color: "#F7DF1E", icon: "JS",  dark: true },
+  { name: "Angular",     color: "#DD0031", icon: "NG"   },
+  { name: "React.js",    color: "#61DAFB", icon: "RX",  dark: true },
+  { name: "Java",        color: "#007396", icon: "Java" },
+  { name: "Spring Boot", color: "#6DB33F", icon: "SB"   },
+  { name: "JavaFX",      color: "#007396", icon: "FX"   },
+  { name: "Python",      color: "#3776AB", icon: "PY"   },
+  { name: "PostgreSQL",  color: "#336791", icon: "PG"   },
+  { name: "Git",         color: "#F05032", icon: "Git"  },
 ];
 
 const proficiency = [
@@ -91,10 +91,10 @@ export default function Skills() {
 
           {/* Bullet points */}
           <ul className="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <li>⚡ Java backend development with Spring Boot, REST APIs and PostgreSQL</li>
-            <li>⚡ JavaFX desktop applications following MVC architecture with JDBC</li>
-            <li>⚡ Frontend development with Angular and React.js</li>
-            <li>⚡ Data analysis with Python and machine learning projects</li>
+            <li>— Java backend development with Spring Boot, REST APIs and PostgreSQL</li>
+            <li>— JavaFX desktop applications following MVC architecture with JDBC</li>
+            <li>— Frontend development with Angular and React.js</li>
+            <li>— Data analysis with Python and machine learning projects</li>
           </ul>
         </div>
       </div>

@@ -17,7 +17,7 @@ const pinnedProjects = [
       "Hospital Management System using Java and Spring Core. Manages patients, doctors, appointments and hospital records with clean layered architecture.",
     tags: ["Java", "Spring Core", "OOP", "Backend"],
     github: "https://github.com/Uwerajanviere/HospitalManagement",
-    emoji: "🏥",
+    emoji: "HMS",
     bg: "#e8f4f8",
   },
   {
@@ -27,7 +27,7 @@ const pinnedProjects = [
       "Backend system built in Java, providing REST APIs and business logic for the NeoTrack application. Focuses on clean API design and service layers.",
     tags: ["Java", "REST API", "Backend", "Spring"],
     github: "https://github.com/Uwerajanviere/neotrack_backend",
-    emoji: "📡",
+    emoji: "NTB",
     bg: "#e8f5e9",
   },
   {
@@ -37,7 +37,7 @@ const pinnedProjects = [
       "A JavaFX desktop app for managing students using PostgreSQL and JDBC. Built with Java 21 and Maven following MVC architecture.",
     tags: ["Java 21", "JavaFX", "PostgreSQL", "JDBC", "MVC"],
     github: "https://github.com/Uwerajanviere/student-management-system",
-    emoji: "🎓",
+    emoji: "SMS",
     bg: "#f3e5f5",
   },
   {
@@ -47,7 +47,7 @@ const pinnedProjects = [
       "Java 21 + JavaFX + JDBC + PostgreSQL desktop app for inventory tracking with full CRUD operations and a clean UI.",
     tags: ["Java 21", "JavaFX", "PostgreSQL", "JDBC"],
     github: "https://github.com/Uwerajanviere/inventory-management-system",
-    emoji: "📦",
+    emoji: "IMS",
     bg: "#fff8e1",
   },
   {
@@ -57,7 +57,7 @@ const pinnedProjects = [
       "A Java-based voting application implementing secure ballot management, candidate registration, and result tallying.",
     tags: ["Java", "OOP", "Backend", "Security"],
     github: "https://github.com/Uwerajanviere/voting-app",
-    emoji: "🗳️",
+    emoji: "VOTE",
     bg: "#fce4ec",
   },
   {
@@ -67,7 +67,7 @@ const pinnedProjects = [
       "Capstone project built during the She Can Code Advanced Java Backend apprenticeship. An assessment platform showcasing full backend development skills.",
     tags: ["Java", "Spring Boot", "Capstone", "She Can Code"],
     github: "https://github.com/Uwerajanviere/SheCanCODE_Capstone_Projects",
-    emoji: "🏆",
+    emoji: "CAP",
     bg: "#f0efff",
   },
 ];

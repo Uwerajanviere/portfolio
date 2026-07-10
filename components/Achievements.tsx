@@ -5,7 +5,7 @@ const achievements = [
     issuer: "STES – 2023",
     description:
       "Successfully completed IoT training covering embedded systems, sensors, and connectivity protocols.",
-    icon: "📡",
+    icon: "IoT",
     bg: "#e8f4f8",
   },
   {
@@ -13,7 +13,7 @@ const achievements = [
     issuer: "She Can Code – 2026",
     description:
       "Completed an advanced Java backend apprenticeship building REST APIs and server-side applications.",
-    icon: "☕",
+    icon: "Java",
     bg: "#fff8e1",
   },
   {
@@ -21,7 +21,7 @@ const achievements = [
     issuer: "She Code Africa – 2026",
     description:
       "Completed a data analysis apprenticeship, mastering Python-based data cleaning, analysis, and visualisation.",
-    icon: "",
+    icon: "Data",
     bg: "#f0efff",
   },
 ];
